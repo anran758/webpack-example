@@ -15,8 +15,11 @@ module.exports = {
     filename: "bundle.js",
   },
   plugins: [
+    // html-webpack-plugin
+    // https://github.com/jantimon/html-webpack-plugin#configuration
     new HtmlWebpackPlugin({
-      title: 'Test Configuration'
+      title: 'Test Configuration',
+      template: path.resolve(__dirname, "./index.html"),
     })
   ],
 }
