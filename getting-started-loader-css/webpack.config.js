@@ -21,25 +21,7 @@ module.exports = {
         // 匹配文件规则
         test: /\.css$/i,
         // use 从右至左进行应用
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            }
-          },
-          'css-loader'
-        ],
-      },
-      {
-        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 10233,
-            name: 'img/[name].[hash].[ext]'
-          },
-        },
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },

@@ -1,8 +1,4 @@
 import { log } from './log'
-
-import img1 from '../images/06.jpg';
-import img2 from '../images/webpack.png';
-
 import '../css/style.css';
 
 function installEvent() {
@@ -32,6 +28,3 @@ function installEvent() {
 
 installEvent();
 log('本节在测试配置噢');
-
-console.log('FileSize 大于       limit --> ', img1);
-console.log('FileSize 小于等于    limit --> ', img2);
