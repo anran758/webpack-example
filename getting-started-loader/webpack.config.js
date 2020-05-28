@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-console.log('MiniCssExtractPlugin.loader', MiniCssExtractPlugin.loader)
-
 module.exports = {
   // 起点或是应用程序的起点入口
   entry: "./src/js/index",
@@ -23,7 +21,25 @@ module.exports = {
         // 匹配文件规则
         test: /\.css$/i,
         // use 从右至左进行应用
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            }
+          },
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10233,
+            name: 'img/[name].[hash].[ext]'
+          },
+        },
       },
     ],
   },

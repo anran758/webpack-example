@@ -36,22 +36,27 @@ p {
 
 .panel1 {
   background-color: #f4f8ea;
+  background-image: url('../images/01.jpg');
 }
 
 .panel2 {
   background-color: #fffcdd;
+  background-image: url('../images/02.png');
 }
 
 .panel3 {
   background-color: #beddcf;
+  background-image: url('../images/03.jpg');
 }
 
 .panel4 {
   background-color: ​#c3cbd8;
+  background-image: url('../images/04.png');
 }
 
 .panel5 {
   background-color: #dfe0e4;
+  background-image: url('../images/05.png');
 }
 
 .item {
