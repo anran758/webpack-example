@@ -24,15 +24,24 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            }
+            options: { publicPath: '../', }
           },
           'css-loader'
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|webp|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            name: 'img/[name].[hash:8].[ext]',
+            fallback: 'file-loader'
+          },
+        },
+      },
+      {
+        test: /\.(svg)(\?.*)?$/,
         use: {
           loader: 'file-loader',
           options: {

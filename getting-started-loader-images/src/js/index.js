@@ -1,7 +1,7 @@
 import { log } from './log'
 
 import img1 from '../images/06.jpg';
-import img2 from '../images/webpack.png';
+import img2 from '../images/webpack.jpg';
 import img3 from '../images/webpack.svg';
 
 import '../css/style.css';
