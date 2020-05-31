@@ -59,18 +59,6 @@ p {
   background-image: url('../images/05.png');
 }
 
-.panel6 {
-  overflow: hidden;
-}
-
-.panel6 .img {
-  max-height: 100vh;
-}
-
-.panel.open.panel6 {
-  flex: 2;
-}
-
 .item {
   flex: 1 0 auto;
   display: flex;
@@ -104,4 +92,29 @@ p {
 .panel.open {
   flex: 3;
   font-size: 40px;
+}
+
+.panel6 {
+  position: relative;
+  overflow: hidden;
+  background-color: #061927;
+}
+
+.panel6 .item {
+  position: relative;
+}
+
+.panel6 .img {
+  position: absolute;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.4s 0.6s;
+}
+
+.panel6.open {
+  flex: 2;
+}
+
+.panel6.open .img {
+  transform: scale(1.2);
 }

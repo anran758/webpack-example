@@ -19,6 +19,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         // 匹配文件规则
         test: /\.css$/i,
         // use 从右至左进行应用

@@ -33,7 +33,19 @@
       <p class="item desc">Pixiv Content ID: 67270728</p>
     </div>
     <div class="panel panel6">
-      <img class="img" src="./img/06.jpg" alt="">
+      <!-- 模板语法引入 -->
+      <!-- <img class="img" src="<%= require('./images/06.jpg').default %>" alt=""> -->
+
+      <!-- 通过 dist 的路径引入 -->
+      <!-- <img class="img" src="./img/06.jpg" alt=""> -->
+
+      <!-- 通过 src 路径引入 -->
+      <!-- <img class="img" src="./images/06.jpg" alt=""> -->
+      <!-- <img class="img" src="./images/06.jpg" alt=""> -->
+
+      <!-- 从根路径进行引入 -->
+      <img class="img" src="/img/06.jpg" alt="">
+      <p class="item index">VI</p>
     </div>
   </div>
 </body>
